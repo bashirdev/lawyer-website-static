@@ -1,3 +1,18 @@
-const fontStyle=[12,16,20,24,32,40,48,56]
+let link =document.querySelectorAll('.nav-link')
 
-export default fontStyle
+link.forEach((item, index)=>{
+    
+    item.addEventListener("click", function(){
+            removeActive()
+            item.classList.add('active')
+        
+        
+    })
+})
+
+
+function removeActive(){
+    link.forEach(item=>{
+        item.classList.remove('active')
+    })
+}
